@@ -1,0 +1,8 @@
+﻿name,value,註解,unit
+r_pedal,220,踏板長,mm
+r_sensor,165.71,MC或sensor長,mm
+pedal_i_angle_deg,-15,踏板傾角,deg
+sensor_i_angle_deg,-9.5,MC或sensor傾角,deg
+px,100,MC或感應接點, 
+py,30,MC或感應接點,
+pedal_push_theta_deg,12,踏板推角,deg

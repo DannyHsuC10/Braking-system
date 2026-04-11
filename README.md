@@ -1,41 +1,23 @@
-# 煞車系統
+# 煞車計算
+只要確定參數之後打入data裡面的csv(excel表格)即可使用matlab計算。
+## 1. 前後煞車比評估
+* 需求:車重、車輪x摩擦、軸距
 
-## [煞車力計算](Braking.md)
-由重心轉移與煞車力量的關係，計算所需放大比例和balance bar。
+首先初步進行車輛前後煞車比評估，確定理想煞車曲線與極限煞車力。運用以下工具計算[brake_ratio](brake_ratio/braking_curve.md)
+## 2. 踏板比計算
+* 需求:輪端架構
 
-## [踏板箱機構設計](Pedal_Sensor_Kinematic_Analysis.md)
-分析踏板機構的線性程度，盡可能讓踏板成線性關係方便車手操作。
+接下來需要配合輪端，決定卡前與碟盤size。除了注意裝配受力，碟盤需要注意一下轉動慣量。
+$$I = m(r_i+r_o)^2/4$$
+另外根據帕斯卡前後MC與卡鉗活塞面積的比(也就是煞車比)需要盡量與前後煞車比接近，並且盡量放大煞車力。
+$$\frac{A_{fcaliper}/A_{fmc}}{A_{rcaliper}/A_{rmc}} = \frac{F_f}{F_r}$$
+然後就可以把參數整理好進行踏板比計算[Pedal_ratio](Pedal_ratio/Pedal_ratio.md)
+## 3. 煞車機構確認
+建立機構草稿時我們需要先用工具探段，判斷機構運作合不合理。
+[pedal_box](/pedal_box/pedal_box.md)
 
-## [踏板機構運作](pedal_box/Mechanical_structure_animation.py)
-用連桿座標位置產生機構動畫，看看實際上機構運作狀況。
+如果想要看看實際運作可以用以下工具[機構運作](pedal_box/Mechanical_structure_animation.py)，不過其實也可以用cad達成。
+## 4. 油管實驗
+* 需求:煞車機構與油管
 
-## matlab工具
-在```matlab_tools```裡面還有一些簡單工具可以進行煞車分析
-1. 油壓 : 油管膨脹計算
-1. 踏板比 : 計算踏板比
-1. 煞車曲線 : 煞車曲線繪製
-1. 煞車機構 : 煞車機構2D簡單模型
-***
-
-## 通用 Markdown 更新工具
-
-這個工具用於 **將 Excel 參數套用到 Markdown 範本**，並自動生成更新後的 `.md` 文件。
-
-### 功能概述
-
-1. **讀取 Excel 參數**
-   - 從 Excel 檔案中讀取 `name` 與 `value` 欄位
-   - 轉換為字典格式，方便後續替換
-
-2. **渲染 Markdown 範本**
-   - 將範本中的 `:::VAR:::` 變數替換為 Excel 中的對應值
-   - 若範本中使用了未定義的變數，會拋出錯誤
-
-3. **更新 Markdown 文件**
-   - 將渲染後的內容輸出到指定路徑
-   - 自動完成範本到正式文件的更新流程
-
-### 注意事項
-- Excel 必須包含 `name` 與 `value` 欄位
-- Markdown 範本中的變數格式必須為 `:::變數名:::`
-- 若範本中使用了未定義的變數，程式會拋出錯誤提示
+如果有時間可以進行一下油管實驗，確定油管膨脹的影響。這會造成煞車力量被膨脹吃掉。如果要實驗記得自行改matlab參數。[Brake_hydraulic_pressure](Brake_hydraulic_pressure/Brake_hydraulic_pressure.md)

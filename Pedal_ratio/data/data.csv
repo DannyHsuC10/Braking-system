@@ -1,0 +1,17 @@
+﻿name,value,註解,unit
+m,310,車重,kg
+rf,0.48,前重心比,
+rr,0.52,後重心比,
+h,0.284,重心高度,m
+L,1.55,軸距,m
+mu_w,1.6,x方向摩擦係數,
+r_w,0.203,輪胎半徑,m
+r_disc_o,0.21,碟盤半徑,m
+d_gap,0.02,碟盤外徑,m
+mu_pad,0.55,來令片摩擦係數,
+D_mc_f,1.20E-02,前MC直徑,m
+D_mc_r,1.40E-02,後MC直徑,m
+D_caliper_f,3.40E-02,前卡前活塞直徑,m
+D_caliper_r,3.40E-02,後卡前活塞直徑,m
+F_driver,5.00E+02,車手出力,N
+balance_bar,7.00E-01,BB,
