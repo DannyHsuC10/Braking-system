@@ -14,7 +14,7 @@ $$\frac{A_{fcaliper}/A_{fmc}}{A_{rcaliper}/A_{rmc}} = \frac{F_f}{F_r}$$
 然後就可以把參數整理好進行踏板比計算[Pedal_ratio](Pedal_ratio/Pedal_ratio.md)
 ## 3. 煞車機構確認
 建立機構草稿時我們需要先用工具探段，判斷機構運作合不合理。
-[pedal_box](/pedal_box/pedal_box.md)
+[pedal_box](pedal_box/pedal_box.md)
 
 如果想要看看實際運作可以用以下工具[機構運作](pedal_box/Mechanical_structure_animation.py)，不過其實也可以用cad達成。
 ## 4. 油管實驗
