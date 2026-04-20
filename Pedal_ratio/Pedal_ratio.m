@@ -54,11 +54,11 @@ M_ra = f_r_max * r_w;
 M_fw = M_fa / 2;
 M_rw = M_ra / 2;
 
-fprintf("N_f = %.1f N (front wheel)\n", N_f);
-fprintf("N_r = %.1f N (rear wheel)\n", N_r);
+fprintf("N_f = %.1f N (front wheels)\n", N_f);
+fprintf("N_r = %.1f N (rear wheels)\n", N_r);
 
-fprintf("f_f_max = %.1f N (front wheel)\n", f_f_max);
-fprintf("f_r_max = %.1f N (rear wheel)\n", f_r_max);
+fprintf("f_f_max = %.1f N (front wheels)\n", f_f_max);
+fprintf("f_r_max = %.1f N (rear wheels)\n", f_r_max);
 
 fprintf("M_fw = %.1f Nm (front wheel)\n", M_fw);
 fprintf("M_rw = %.1f Nm (rear wheel)\n", M_rw);
@@ -82,8 +82,8 @@ F_caliper_f = F_disc_f / (2 * mu_pad);
 F_caliper_r = F_disc_r / (2 * mu_pad);
 
 % 卡鉗面積
-A_caliper_f = pi * (D_caliper_f / 2)^2;
-A_caliper_r = pi * (D_caliper_r / 2)^2;
+A_caliper_f = N_caliper_f/2 * pi * (D_caliper_f / 2)^2;
+A_caliper_r = N_caliper_r/2 * pi * (D_caliper_r / 2)^2;
 
 % 管路壓力
 P_f = F_caliper_f / A_caliper_f;
