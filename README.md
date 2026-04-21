@@ -16,11 +16,14 @@ $$\frac{A_{fcaliper}/A_{fmc}}{A_{rcaliper}/A_{rmc}} = \frac{F_f}{F_r}$$
 建立機構草稿時我們需要先用工具探段，判斷機構運作合不合理。
 
 
+## 4. [煞車力量驗證](Brake_force/Brake_force.md)
+最後驗證一下我們的設計可以產生多少煞車力量。確定是否合理。
+
 如果想要看看實際運作可以用以下工具[機構運作](pedal_box/Mechanical_structure_animation.py)，不過其實也可以用cad達成。
-## 4. [油管實驗](Brake_hydraulic_pressure/Brake_hydraulic_pressure.md)
+## 5. [油管實驗](Brake_hydraulic_pressure/Brake_hydraulic_pressure.md)
 * 需求:煞車機構與油管
 
 如果有時間可以進行一下油管實驗，確定油管膨脹的影響。這會造成煞車力量被膨脹吃掉。如果要實驗記得自行改matlab參數。
 
 ## [煞車設計報告](md_updater/Braking.md)
-可用於產生md檔案報告，主動式的md更新工具，可以搭配其他模組使用
+可用於產生md檔案報告，主動式的md更新工具，同樣的概念可以搭配其他模組使用
