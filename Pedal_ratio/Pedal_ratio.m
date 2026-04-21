@@ -98,7 +98,7 @@ F_mc_f = P_f * A_mc_f;
 F_mc_r = P_r * A_mc_r;
 
 % Pedal Ratio
-PR = (F_mc_f + F_mc_r) / F_driver;
+PR = (F_mc_f + F_mc_r) / F_driver * SF;
 
 %% =========================
 % 結果表格

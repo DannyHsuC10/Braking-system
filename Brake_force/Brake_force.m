@@ -11,8 +11,8 @@ F_mc = F_driver*PR;
 
 fprintf("\n F_mc = %.2f\n", F_mc);
 % balance_bar
-bb_f = 1-balance_bar;
-bb_r = balance_bar;
+bb_r = 1-balance_bar;
+bb_f = balance_bar;
 
 % 主缸面積
 A_mc_f = pi * (D_mc_f / 2)^2;
